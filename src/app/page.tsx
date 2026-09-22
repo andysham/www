@@ -1,75 +1,33 @@
-import Image from "next/image";
 import styles from "./page.module.css";
-// Static imports (rather than src="/next.svg") so next/image resolves the
-// URL through its build pipeline and applies basePath automatically — a
-// plain public/-relative string src doesn't get basePath applied. See
-// next.config.ts.
-import nextLogo from "../../public/next.svg";
-import vercelLogo from "../../public/vercel.svg";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src={nextLogo}
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>
-            To get started, edit the{" "}
-            <code className={styles.code}>page.tsx</code> file.
-          </h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main className={styles.page}>
+      <header className={styles.hero}>
+        <div className={styles.heroInner}>
+          <p className={styles.kicker}>sham.dev</p>
+          <h1 className={styles.name}>Andrew Shamis</h1>
+          <p className={styles.tagline}>
+            [TODO - Personal description]
           </p>
         </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src={vercelLogo}
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+      </header>
+
+      <section className={styles.section}>
+        <h2 className={styles.sectionHeading}>CV / Resumé</h2>
+        <p className={styles.prose}>
+          [TODO - Employment History]
+        </p>
+        {/* <p className={`${styles.prose} ${styles.muted}`}>
+          Recent focus: retrieval, evaluation, and efficient fine-tuning.
+        </p> */}
+      </section>
+
+      <footer className={styles.footer}>
+        <span>© {new Date().getFullYear()} Andrew Shamis</span>
+        <a href="mailto:andy@sham.dev">andy@sham.dev</a>
+        <a href="https://github.com/andysham">github.com/andysham</a>
+      </footer>
+    </main>
   );
 }
