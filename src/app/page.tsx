@@ -1,5 +1,11 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+// Static imports (rather than src="/next.svg") so next/image resolves the
+// URL through its build pipeline and applies basePath automatically — a
+// plain public/-relative string src doesn't get basePath applied. See
+// next.config.ts.
+import nextLogo from "../../public/next.svg";
+import vercelLogo from "../../public/vercel.svg";
 
 export default function Home() {
   return (
@@ -7,7 +13,7 @@ export default function Home() {
       <main className={styles.main}>
         <Image
           className={styles.logo}
-          src="/next.svg"
+          src={nextLogo}
           alt="Next.js logo"
           width={100}
           height={20}
@@ -47,7 +53,7 @@ export default function Home() {
           >
             <Image
               className={styles.logo}
-              src="/vercel.svg"
+              src={vercelLogo}
               alt="Vercel logomark"
               width={16}
               height={14}
