@@ -147,7 +147,7 @@
 }
 
 .abstractBody {
-  font-size: 0.9375rem;
+  font-size: 1rem;
   line-height: 1.65;
   color: var(--muted);
   text-align: justify;
@@ -241,7 +241,7 @@
 }
 
 .bullets li {
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
   line-height: 1.6;
   text-align: justify;
   hyphens: auto;
@@ -361,7 +361,7 @@
 }
 
 .postSummary {
-  font-size: 0.9375rem;
+  font-size: 1rem;
   color: var(--muted);
   line-height: 1.55;
 }
