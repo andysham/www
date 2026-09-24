@@ -1,8 +1,9 @@
+/* Single source of truth for the palette — paper.module.css consumes these. */
 :root {
-  --paper: #f3f4f0;
-  --ink: #1d2027;
-  --muted: #5c6470;
-  --line: #cbd3cd;
+  --paper: #fdfdfb;
+  --ink: #111111;
+  --muted: #595959;
+  --line: #d6d4cf;
   --signal: #4438c7;
 
   --font-display: var(--font-serif), "Times New Roman", serif;
@@ -12,11 +13,11 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --paper: #1b1d22;
-    --ink: #e7e8e4;
-    --muted: #93989f;
-    --line: #33363c;
-    --signal: #8b7ffb;
+    --paper: #131820;
+    --ink: #e9ebef;
+    --muted: #99a0ab;
+    --line: #262c36;
+    --signal: #8b95ff;
   }
 
   html {
