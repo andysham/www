@@ -38,20 +38,22 @@ export default function CV() {
           {EXPERIENCE.map((item, index) => (
             <li key={`${item.org}-${item.period}`} className={styles.position}>
               <span className={styles.subnumber}>1.{index + 1}</span>
-              <span className={styles.positionBody}>
-                <span className={styles.role}>{item.org}</span>
-                <span className={styles.org}>
-                  {item.title}, {item.location}
-                </span>
-                <span className={styles.period}>
-                  {item.period} · {item.stack.join(", ")}
-                </span>
+              <details className={styles.disclosure}>
+                <summary className={styles.summary}>
+                  <span className={styles.role}>{item.org}</span>
+                  <span className={styles.org}>
+                    {item.title}, {item.location}
+                  </span>
+                  <span className={styles.period}>
+                    {item.period} · {item.stack.join(", ")}
+                  </span>
+                </summary>
                 <ul className={styles.bullets}>
                   {item.bullets.map((bullet) => (
                     <li key={bullet}>{bullet}</li>
                   ))}
                 </ul>
-              </span>
+              </details>
             </li>
           ))}
         </ol>
@@ -63,10 +65,12 @@ export default function CV() {
         </h2>
         <div className={styles.position}>
           <span className={styles.subnumber}>2.1</span>
-          <span className={styles.positionBody}>
-            <span className={styles.role}>{EDUCATION.institution}</span>
-            <span className={styles.org}>{EDUCATION.degree}</span>
-            <span className={styles.period}>{EDUCATION.period}</span>
+          <details className={styles.disclosure}>
+            <summary className={styles.summary}>
+              <span className={styles.role}>{EDUCATION.institution}</span>
+              <span className={styles.org}>{EDUCATION.degree}</span>
+              <span className={styles.period}>{EDUCATION.period}</span>
+            </summary>
             <ul className={styles.courses}>
               {EDUCATION.courses.map((course) => (
                 <li key={course.name}>
@@ -75,22 +79,24 @@ export default function CV() {
                 </li>
               ))}
             </ul>
-          </span>
+          </details>
         </div>
         <div className={`${styles.position} ${styles.positionSpaced}`}>
           <span className={styles.subnumber}>2.2</span>
-          <span className={styles.positionBody}>
-            <span className={styles.role}>Dissertation</span>
-            <span className={styles.org}>{EDUCATION.dissertation.title}</span>
-            <span className={styles.period}>
-              {EDUCATION.dissertation.grade}
-            </span>
+          <details className={styles.disclosure}>
+            <summary className={styles.summary}>
+              <span className={styles.role}>Dissertation</span>
+              <span className={styles.org}>{EDUCATION.dissertation.title}</span>
+              <span className={styles.period}>
+                {EDUCATION.dissertation.grade}
+              </span>
+            </summary>
             <ul className={styles.bullets}>
               {EDUCATION.dissertation.bullets.map((bullet) => (
                 <li key={bullet}>{bullet}</li>
               ))}
             </ul>
-          </span>
+          </details>
         </div>
       </section>
 
@@ -102,19 +108,21 @@ export default function CV() {
           {PROJECTS.map((project, index) => (
             <li key={project.name} className={styles.position}>
               <span className={styles.subnumber}>3.{index + 1}</span>
-              <span className={styles.positionBody}>
-                <span className={styles.role}>{project.name}</span>
-                <span className={styles.org}>
-                  {project.role ? `${project.role} — ` : ""}
-                  {project.stack.join(", ")}
-                </span>
-                <span className={styles.period}>{project.date}</span>
+              <details className={styles.disclosure}>
+                <summary className={styles.summary}>
+                  <span className={styles.role}>{project.name}</span>
+                  <span className={styles.org}>
+                    {project.role ? `${project.role} — ` : ""}
+                    {project.stack.join(", ")}
+                  </span>
+                  <span className={styles.period}>{project.date}</span>
+                </summary>
                 <ul className={styles.bullets}>
                   {project.bullets.map((bullet) => (
                     <li key={bullet}>{bullet}</li>
                   ))}
                 </ul>
-              </span>
+              </details>
             </li>
           ))}
         </ol>
