@@ -48,8 +48,9 @@ body {
   font-family: var(--font-body);
   font-size: 17px;
   line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* No -webkit-font-smoothing: antialiased here. It thins glyphs on macOS,
+     which light-on-dark already does — the two together make Computer
+     Modern's hairlines vanish. Subpixel rendering keeps the stems solid. */
 }
 
 a {

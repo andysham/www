@@ -5,12 +5,16 @@ import "./globals.css";
 
 // New Computer Modern 7.0.2 (GUST Font License), subset to Latin.
 // Knuth's Computer Modern as maintained by Antonis Tsolomitis.
+//
+// Uses the Book weight rather than Regular. Regular is cut for black ink on
+// white paper; on a dark background its hairlines disappear at body sizes.
+// Book is NCM's screen-legible cut and is what makes this readable here.
 const computerModern = localFont({
   variable: "--font-cm",
   display: "swap",
   src: [
-    { path: "./fonts/serif-10-regular.woff2", weight: "400", style: "normal" },
-    { path: "./fonts/serif-10-italic.woff2", weight: "400", style: "italic" },
+    { path: "./fonts/serif-10-book.woff2", weight: "400", style: "normal" },
+    { path: "./fonts/serif-10-bookitalic.woff2", weight: "400", style: "italic" },
     { path: "./fonts/serif-10-bold.woff2", weight: "700", style: "normal" },
   ],
 });
