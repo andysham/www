@@ -97,8 +97,15 @@
 /* Title block */
 
 .titleBlock {
+  position: relative;
   text-align: center;
   margin-bottom: 2.75rem;
+  padding-top: 3.25rem;
+}
+
+.titleBlock > *:not(svg) {
+  position: relative;
+  z-index: 1;
 }
 
 .title {

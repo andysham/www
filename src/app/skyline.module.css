@@ -1,0 +1,42 @@
+/* Sits behind the title block; bleeds past the text column on both sides. */
+.svg {
+  position: absolute;
+  left: 50%;
+  bottom: -1.5rem;
+  transform: translateX(-50%);
+  width: 148%;
+  max-width: none;
+  height: auto;
+  pointer-events: none;
+  z-index: 0;
+  color: var(--ink);
+}
+
+@media (max-width: 720px) {
+  .svg {
+    width: 128%;
+  }
+}
+
+.edges line {
+  stroke: currentColor;
+  stroke-width: 1.1;
+  stroke-linecap: round;
+  opacity: 0.2;
+}
+
+.links line {
+  stroke: currentColor;
+  stroke-width: 1;
+  opacity: 0.11;
+}
+
+.strayNodes circle {
+  fill: currentColor;
+  opacity: 0.18;
+}
+
+.nodes circle {
+  fill: currentColor;
+  opacity: 0.26;
+}
