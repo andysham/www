@@ -1,11 +1,13 @@
 import { EDUCATION, EXPERIENCE, PROFILE, PROJECTS } from "./cv";
 import styles from "./paper.module.css";
 import { Shell } from "./shell";
+import { Skyline } from "./skyline";
 
 export default function CV() {
   return (
     <Shell current="/" stamp="sham.dev:2609.00001v1 [cs.LG] 24 Sep 2026">
       <header className={styles.titleBlock}>
+        <Skyline />
         <h1 className={styles.title}>{PROFILE.name}</h1>
         <p className={styles.author}>{PROFILE.role}</p>
         <p className={styles.affiliation}>
