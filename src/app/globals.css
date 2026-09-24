@@ -1,28 +1,19 @@
-/* Single source of truth for the palette — paper.module.css consumes these. */
+/* Single source of truth for the palette — paper.module.css consumes these.
+   Black ink on cream, regardless of system preference. */
 :root {
-  --paper: #fdfdfb;
-  --ink: #111111;
-  --muted: #595959;
-  --line: #d6d4cf;
-  --signal: #4438c7;
+  --paper: #f8f4ea;
+  --ink: #14120d;
+  --muted: #5d574a;
+  --line: #ddd5c3;
+  --signal: #3a34a0;
 
   --font-display: var(--font-serif), "Times New Roman", serif;
   --font-body: var(--font-sans), system-ui, sans-serif;
   --font-data: var(--font-mono), ui-monospace, monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --paper: #131820;
-    --ink: #e9ebef;
-    --muted: #99a0ab;
-    --line: #262c36;
-    --signal: #8b95ff;
-  }
-
-  html {
-    color-scheme: dark;
-  }
+html {
+  color-scheme: light;
 }
 
 * {
