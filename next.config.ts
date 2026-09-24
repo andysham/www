@@ -1,3 +1,4 @@
+import createMDX from "@next/mdx";
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
@@ -7,9 +8,12 @@ const nextConfig: NextConfig = {
   output: "export",
   // Served at the root of sham.dev (a GitHub Pages custom domain, via
   // public/CNAME), not under a /www subpath — so no basePath here.
+  pageExtensions: ["ts", "tsx", "md", "mdx"],
   images: {
     unoptimized: true, // next/image's optimizer needs a server; static export has none.
   },
 };
 
-export default nextConfig;
+const withMDX = createMDX({});
+
+export default withMDX(nextConfig);
